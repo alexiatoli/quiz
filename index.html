@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Movie Quiz</title>
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/css/bootstrap.min.css" rel="stylesheet">
+</head>
+<body>
+    <div class="container mt-5">
+        <h1 class="text-center">Movie Trivia Quiz</h1>
+        <form id="quiz-form">
+            <!-- Question 1: Radio buttons -->
+            <div class="mb-3">
+                <label for="question1" class="form-label">Who played the character of "The Joker" in "The Dark Knight"?</label>
+                <div class="btn-group-vertical" role="group" aria-label="Question 1">
+                    <input type="radio" class="btn-check" name="question1" id="option1" autocomplete="off">
+                    <label class="btn btn-outline-primary" for="option1">Heath Ledger</label>
+
+                    <input type="radio" class="btn-check" name="question1" id="option2" autocomplete="off">
+                    <label class="btn btn-outline-primary" for="option2">Jared Leto</label>
+
+                    <input type="radio" class="btn-check" name="question1" id="option3" autocomplete="off">
+                    <label class="btn btn-outline-primary" for="option3">Jack Nicholson</label>
+
+                    <input type="radio" class="btn-check" name="question1" id="option4" autocomplete="off">
+                    <label class="btn btn-outline-primary" for="option4">Tom Hardy</label>
+                </div>
+            </div>
+
+            <!-- Question 2: Checkbox buttons -->
+            <div class="mb-3">
+                <label for="question2" class="form-label">Which of these actors appeared in the movie "The Avengers"?</label>
+                <div class="btn-group" role="group" aria-label="Question 2">
+                    <input type="checkbox" class="btn-check" name="question2" id="actor1" autocomplete="off">
+                    <label class="btn btn-outline-secondary" for="actor1">Robert Downey Jr.</label>
+
+                    <input type="checkbox" class="btn-check" name="question2" id="actor2" autocomplete="off">
+                    <label class="btn btn-outline-secondary" for="actor2">Chris Hemsworth</label>
+
+                    <input type="checkbox" class="btn-check" name="question2" id="actor3" autocomplete="off">
+                    <label class="btn btn-outline-secondary" for="actor3">Will Smith</label>
+
+                    <input type="checkbox" class="btn-check" name="question2" id="actor4" autocomplete="off">
+                    <label class="btn btn-outline-secondary" for="actor4">Scarlett Johansson</label>
+                </div>
+            </div>
+            
+        </form>
+        <!-- Submit button -->
+        <button class="btn btn-primary" id="submit-btn">Submit</button>
+    </div>
+
+    <!-- Bootstrap JS (Optional) -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
