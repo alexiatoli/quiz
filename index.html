@@ -1,77 +1,118 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Movie Quiz</title>
-    <!-- Bootstrap CSS -->
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/css/bootstrap.min.css" rel="stylesheet">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Movie Quiz</title>
+  <!-- Bootstrap CSS -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/css/bootstrap.min.css" rel="stylesheet">
+  
+  <!-- Custom CSS -->
+  <style>
+    body {
+      background: linear-gradient(to right, #1e3c72, #2a5298);
+      color: #fff;
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    }
+
+    .container {
+      background-color: rgba(0, 0, 0, 0.75);
+      border-radius: 15px;
+      padding: 30px;
+      max-width: 700px;
+      box-shadow: 0 0 20px rgba(0,0,0,0.6);
+    }
+
+    .form-label {
+      font-weight: bold;
+      margin-bottom: 10px;
+      font-size: 1.2rem;
+    }
+
+    .btn-outline-primary:hover,
+    .btn-outline-secondary:hover {
+      background-color: #fff;
+      color: #000;
+    }
+
+    #submit-btn {
+      margin-top: 20px;
+      width: 100%;
+      font-weight: bold;
+      transition: all 0.3s ease;
+    }
+
+    #submit-btn:hover {
+      background-color: #28a745;
+      border-color: #28a745;
+    }
+  </style>
 </head>
 <body>
-    <div class="container mt-5">
-        <h1 class="text-center">Movie Trivia Quiz</h1>
-        <form id="quiz-form">
-            <!-- Question 1: Radio Buttons (Button Group for Multiple Choice) -->
-            <div class="mb-3">
-                <label for="question1" class="form-label">Who played the character of "The Joker" in "The Dark Knight"?</label>
-                <div class="btn-group-vertical" role="group" aria-label="Question 1">
-                    <input type="radio" class="btn-check" name="question1" id="option1" autocomplete="off">
-                    <label class="btn btn-outline-primary" for="option1">Heath Ledger</label>
+  <div class="container mt-5">
+    <h1 class="text-center mb-4">🎬 Movie Trivia Quiz</h1>
+    <form id="quiz-form">
+      <!-- Question 1 -->
+      <div class="mb-4">
+        <label class="form-label">Who played the character of "The Joker" in "The Dark Knight"?</label>
+        <div class="btn-group-vertical" role="group" aria-label="Question 1">
+          <input type="radio" class="btn-check" name="question1" id="option1" autocomplete="off">
+          <label class="btn btn-outline-primary" for="option1">Heath Ledger</label>
 
-                    <input type="radio" class="btn-check" name="question1" id="option2" autocomplete="off">
-                    <label class="btn btn-outline-primary" for="option2">Jared Leto</label>
+          <input type="radio" class="btn-check" name="question1" id="option2" autocomplete="off">
+          <label class="btn btn-outline-primary" for="option2">Jared Leto</label>
 
-                    <input type="radio" class="btn-check" name="question1" id="option3" autocomplete="off">
-                    <label class="btn btn-outline-primary" for="option3">Jack Nicholson</label>
+          <input type="radio" class="btn-check" name="question1" id="option3" autocomplete="off">
+          <label class="btn btn-outline-primary" for="option3">Jack Nicholson</label>
 
-                    <input type="radio" class="btn-check" name="question1" id="option4" autocomplete="off">
-                    <label class="btn btn-outline-primary" for="option4">Tom Hardy</label>
-                </div>
-            </div>
+          <input type="radio" class="btn-check" name="question1" id="option4" autocomplete="off">
+          <label class="btn btn-outline-primary" for="option4">Tom Hardy</label>
+        </div>
+      </div>
 
-            <!-- Question 2: Checkboxes (Multiple Selections Allowed) -->
-            <div class="mb-3">
-                <label for="question2" class="form-label">Which actors appeared in "The Avengers"?</label>
-                <div class="btn-group" role="group" aria-label="Question 2">
-                    <input type="checkbox" class="btn-check" name="question2" id="actor1" autocomplete="off">
-                    <label class="btn btn-outline-secondary" for="actor1">Robert Downey Jr.</label>
+      <!-- Question 2 -->
+      <div class="mb-4">
+        <label class="form-label">Which actors appeared in "The Avengers"?</label>
+        <div class="btn-group" role="group" aria-label="Question 2">
+          <input type="checkbox" class="btn-check" name="question2" id="actor1" autocomplete="off">
+          <label class="btn btn-outline-secondary" for="actor1">Robert Downey Jr.</label>
 
-                    <input type="checkbox" class="btn-check" name="question2" id="actor2" autocomplete="off">
-                    <label class="btn btn-outline-secondary" for="actor2">Chris Hemsworth</label>
+          <input type="checkbox" class="btn-check" name="question2" id="actor2" autocomplete="off">
+          <label class="btn btn-outline-secondary" for="actor2">Chris Hemsworth</label>
 
-                    <input type="checkbox" class="btn-check" name="question2" id="actor3" autocomplete="off">
-                    <label class="btn btn-outline-secondary" for="actor3">Will Smith</label>
+          <input type="checkbox" class="btn-check" name="question2" id="actor3" autocomplete="off">
+          <label class="btn btn-outline-secondary" for="actor3">Will Smith</label>
 
-                    <input type="checkbox" class="btn-check" name="question2" id="actor4" autocomplete="off">
-                    <label class="btn btn-outline-secondary" for="actor4">Scarlett Johansson</label>
-                </div>
-            </div>
-            
-            <!-- Question 3: Radio Buttons (Button Group for Multiple Choice) -->
-            <div class="mb-3">
-                <label for="question3" class="form-label">Which movie won the Oscar for Best Picture in 2020?</label>
-                <div class="btn-group-vertical" role="group" aria-label="Question 3">
-                    <input type="radio" class="btn-check" name="question3" id="movie1" autocomplete="off">
-                    <label class="btn btn-outline-primary" for="movie1">Parasite</label>
+          <input type="checkbox" class="btn-check" name="question2" id="actor4" autocomplete="off">
+          <label class="btn btn-outline-secondary" for="actor4">Scarlett Johansson</label>
+        </div>
+      </div>
 
-                    <input type="radio" class="btn-check" name="question3" id="movie2" autocomplete="off">
-                    <label class="btn btn-outline-primary" for="movie2">1917</label>
+      <!-- Question 3 -->
+      <div class="mb-4">
+        <label class="form-label">Which movie won the Oscar for Best Picture in 2020?</label>
+        <div class="btn-group-vertical" role="group" aria-label="Question 3">
+          <input type="radio" class="btn-check" name="question3" id="movie1" autocomplete="off">
+          <label class="btn btn-outline-primary" for="movie1">Parasite</label>
 
-                    <input type="radio" class="btn-check" name="question3" id="movie3" autocomplete="off">
-                    <label class="btn btn-outline-primary" for="movie3">Once Upon a Time in Hollywood</label>
+          <input type="radio" class="btn-check" name="question3" id="movie2" autocomplete="off">
+          <label class="btn btn-outline-primary" for="movie2">1917</label>
 
-                    <input type="radio" class="btn-check" name="question3" id="movie4" autocomplete="off">
-                    <label class="btn btn-outline-primary" for="movie4">Joker</label>
-                </div>
-            </div>
+          <input type="radio" class="btn-check" name="question3" id="movie3" autocomplete="off">
+          <label class="btn btn-outline-primary" for="movie3">Once Upon a Time in Hollywood</label>
 
-            <!-- Submit Button -->
-            <button class="btn btn-primary" id="submit-btn">Submit</button>
-        </form>
-    </div>
+          <input type="radio" class="btn-check" name="question3" id="movie4" autocomplete="off">
+          <label class="btn btn-outline-primary" for="movie4">Joker</label>
+        </div>
+      </div>
 
-    <!-- Bootstrap JS (Optional) -->
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/js/bootstrap.bundle.min.js"></script>
+      <!-- Submit -->
+      <button type="submit" class="btn btn-primary" id="submit-btn">Submit Answers</button>
+    </form>
+  </div>
+
+  <!-- Bootstrap JS -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/js/bootstrap.bundle.min.js"></script>
 </body>
 </html>
 
